@@ -56,7 +56,8 @@ public class App
 	    System.out.println("Test scripts executed");
 	    TakesScreenshot scrShot = ((TakesScreenshot)driver);
 	    File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
-	    File destFile = new File("C:\\Users\\Dell\\Documents\\test-reports.jpg");
+	    //File destFile = new File("C:\\Users\\Dell\\Documents\\test-reports.jpg");
+	    File destFile = new File("\\home\\ubuntu\\test-reports.jpg");
 	    FileUtils.copyFile(srcFile,destFile);
 	    Thread.sleep(2000);
 	    driver.quit();
