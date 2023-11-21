@@ -25,16 +25,16 @@ public class App
 
 	    System.out.println("Script Started");	
 	     
-	    //System.setProperty("webdriver.chrome.driver", "C:/Users/Dell/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe");
+	    //System.setProperty("webdriver.chrome.driver", "C:\Users\Dell\Downloads\chromedriver-win64\chromedriver-win64/chromedriver.exe");
 	    WebDriverManager.chromedriver().setup();
 	   
 	    ChromeOptions chromeOptions = new ChromeOptions();
-	    chromeOptions.addArguments("--headless");
+	   // chromeOptions.addArguments("--headless");
 	    
 	 
 	    System.out.println("Driver opening up the url in browser");	
 	    WebDriver driver = new ChromeDriver(chromeOptions);
-	    driver.get("http://54.196.163.29:8081//contact.html");	
+	    driver.get("http://localhost:8083//contact.html");	
 	    
 	 
 	    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
