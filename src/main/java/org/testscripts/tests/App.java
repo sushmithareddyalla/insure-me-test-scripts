@@ -15,6 +15,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class App 
 {
@@ -23,8 +25,8 @@ public class App
 
 	    System.out.println("Script Started");	
 	     
-	    System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-	    
+	    //System.setProperty("webdriver.chrome.driver", "C:/Users/Dell/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe");
+	    WebDriverManager.chromedriver().setup();
 	   
 	    ChromeOptions chromeOptions = new ChromeOptions();
 	    
@@ -57,7 +59,7 @@ public class App
 	    TakesScreenshot scrShot = ((TakesScreenshot)driver);
 	    File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
 	    //File destFile = new File("C:\\Users\\Dell\\Documents\\test-reports.jpg");
-	    File destFile = new File("\\home\\ubuntu\\test-reports.jpg");
+	    File destFile = new File("/var/lib/jenkins/workspace/insure-me-test-scripts/test-reports.jpg");
 	    FileUtils.copyFile(srcFile,destFile);
 	    Thread.sleep(2000);
 	    driver.quit();
