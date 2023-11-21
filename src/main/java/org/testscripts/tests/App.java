@@ -29,7 +29,7 @@ public class App
 	    WebDriverManager.chromedriver().setup();
 	   
 	    ChromeOptions chromeOptions = new ChromeOptions();
-	   // chromeOptions.addArguments("--headless");
+	    chromeOptions.addArguments("--headless");
 	    
 	 
 	    System.out.println("Driver opening up the url in browser");	
